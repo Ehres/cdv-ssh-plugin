@@ -31,7 +31,7 @@
 
 - (BOOL) isAuthenticationMethodSupported :(NSString*)method {
     NSArray* supported = [session supportedAuthenticationMethods];
-    
+
     return [supported containsObject:method];
 }
 
@@ -39,7 +39,15 @@
     // authenticating
     _kbpwd = password;
     [session authenticateByKeyboardInteractive];
-    
+
+    return [session isAuthorized];
+}
+
+- (BOOL) authenticateByPassword :(NSString*)password {
+    // authenticating
+    // _kbpwd = password;
+    [session authenticateByPassword:password];
+
     return [session isAuthorized];
 }
 

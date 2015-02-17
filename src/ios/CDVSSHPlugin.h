@@ -11,6 +11,7 @@
 -(BOOL) disposeChannel :(NSString *)key;
 
 -(void) authenticateByKeyboard: (CDVInvokedUrlCommand *) command;
+-(void) authenticateByPassword: (CDVInvokedUrlCommand *) command;
 
 -(void) scp: (CDVInvokedUrlCommand *) command;
 

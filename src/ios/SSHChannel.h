@@ -20,6 +20,7 @@
 - (void)close;
 - (BOOL) isAuthenticationMethodSupported :(NSString*)method;
 - (BOOL) authenticateByKeyboardInteractive :(NSString*)password;
+- (BOOL) authenticateByPassword :(NSString*)password;
 
 - (void)session:(NMSSHSession *)session didDisconnectWithError:(NSError *)error;
 - (NSString *)session:(NMSSHSession *)session keyboardInteractiveRequest:(NSString *)request;
